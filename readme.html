@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playwright Test Automation Suite on TestMU AI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 12px;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+    
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1e3a8a;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 6px;
+      page-break-after: avoid;
+    }
+    
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #2563eb;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+    }
+    
+    p {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+    
+    ul {
+      margin-top: 0;
+      margin-bottom: 16px;
+      padding-left: 20px;
+    }
+    
+    li {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+      background-color: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: #0f172a;
+    }
+    
+    pre {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 14px;
+      overflow-x: auto;
+      margin-top: 0;
+      margin-bottom: 18px;
+      page-break-inside: avoid;
+    }
+    
+    pre code {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      font-size: 12px;
+      color: #334155;
+    }
+    
+    .badge {
+      display: inline-block;
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+      border: 1px solid #dbeafe;
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: #e2e8f0;
+      margin: 24px 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Playwright Test Automation Suite on TestMU AI</h1>
+    <div class="badge">E2E Testing & Cloud Integration</div>
+    <p>A robust and resilient E2E (End-to-End) test automation suite built with <strong>Playwright</strong> designed to run seamlessly on the <strong>TestMU AI (LambdaTest)</strong> cloud grid.</p>
+    <p>This repository contains robust test scripts that automate user interaction scenarios on the LambdaTest Selenium Playground.</p>
+
+    <div class="divider"></div>
+
+    <h2>📁 Repository Structure</h2>
+    <ul>
+      <li><strong><code>tests/</code></strong>: Contains the Playwright test specification files:
+        <ul>
+          <li><code>scenario1.spec.js</code>: Automates the <strong>Simple Form Demo</strong> scenario.</li>
+          <li><code>scenario2.spec.js</code>: Automates the <strong>Drag and Drop Sliders</strong> scenario.</li>
+          <li><code>scenario3.spec.js</code>: Automates the <strong>Input Form Submit</strong> validation scenario.</li>
+        </ul>
+      </li>
+      <li><strong><code>playwright.config.js</code></strong>: Global configuration file defining environment settings, local browser options, and the integration connection to the LambdaTest remote grid.</li>
+      <li><strong><code>SimpleFormDemo-test-results/</code></strong>: Execution results, logs, and screenshots for Scenario 1.</li>
+      <li><strong><code>DragAndDropSliders-test-results/</code></strong>: Execution results, logs, and screenshots for Scenario 2.</li>
+      <li><strong><code>InputFormSubmit-test-results/</code></strong>: Execution results, logs, and screenshots for Scenario 3.</li>
+      <li><strong><code>.gitignore</code></strong>: Excludes locally generated folders like <code>node_modules</code> and runtime credentials.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>🛠️ Test Scenarios</h2>
+
+    <h3>1. Simple Form Demo (<code>scenario1.spec.js</code>)</h3>
+    <ul>
+      <li>Navigates to the LambdaTest Selenium Playground.</li>
+      <li>Enters the message <code>"Welcome to test MU AI"</code>.</li>
+      <li>Clicks <strong>Get Checked Value</strong> and asserts that the displayed paragraph matches the input text exactly.</li>
+    </ul>
+
+    <h3>2. Drag & Drop Sliders (<code>scenario2.spec.js</code>)</h3>
+    <ul>
+      <li>Navigates to the slider playground.</li>
+      <li>Locates the range slider for <strong>Default value 15</strong> (under <code>#slider3</code>).</li>
+      <li>Sets the value to <strong>95</strong> using a native event dispatcher to ensure flawless UI state update.</li>
+      <li>Verifies that the adjacent output label displays <code>95</code>.</li>
+    </ul>
+
+    <h3>3. Input Form Submit (<code>scenario3.spec.js</code>)</h3>
+    <ul>
+      <li>Navigates to the Input Form page.</li>
+      <li>Fills in all required fields (Name, Email, Password, Company, Country, City, Address, Zip, etc.).</li>
+      <li>Submits the form and verifies that the success message: <code>"Thanks for contacting us, we will get back to you shortly."</code> is visible on the page.</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2>🚀 Getting Started</h2>
+
+    <h3>1. Install Dependencies</h3>
+    <pre><code>npm install</code></pre>
+
+    <h3>2. Configure Environment Variables</h3>
+    <p>You must set your TestMU AI (LambdaTest) credentials in your terminal session before execution.</p>
+    
+    <p><strong>Windows (PowerShell)</strong>:</p>
+    <pre><code>$env:LT_USERNAME="your_username"
+$env:LT_ACCESS_KEY="your_access_key"</code></pre>
+
+    <p><strong>macOS / Linux</strong>:</p>
+    <pre><code>export LT_USERNAME="your_username"
+export LT_ACCESS_KEY="your_access_key"</code></pre>
+
+    <div class="divider"></div>
+
+    <h2>🏃 Running the Tests</h2>
+
+    <h3>Option A: Run Locally (Headless mode)</h3>
+    <pre><code>npx playwright test</code></pre>
+
+    <h3>Option B: Run on the TestMU AI Cloud Grid (Remote execution)</h3>
+    <pre><code>npx playwright test --project=lambdatest-chrome</code></pre>
+    
+    <p>Once triggered, the test runs on the LambdaTest cloud grid and all logs, console output, screenshots, and video recordings will be accessible directly on the <strong>TestMU AI Automation Dashboard</strong>.</p>
+  </div>
+</body>
+</html>
